@@ -1,0 +1,10 @@
+gradio>=4.0.0
+streamlit>=1.25.0
+
+# Dev dependencies
+pytest
+pytest-cov
+mypy
+ruff
+black
+types-setuptools

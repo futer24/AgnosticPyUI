@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agnostic-py-ui"
+version = "0.1.0"
+description = "A clean architecture web template decoupling logic from Streamlit/Gradio."
+authors = [{ name = "Agnostic Developer", email = "dev@example.com" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "gradio>=4.0.0",
+    "streamlit>=1.25.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy",
+    "pytest",
+    "black",
+    "ruff",
+    "types-setuptools",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+select = ["E", "F", "W", "I", "N", "UP", "B", "D"]
+
+[tool.ruff.pydocstyle]
+convention = "google"
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+ignore_missing_imports = true
+warn_unused_configs = true
+disallow_untyped_defs = true
